@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-neutral-700;
+}
+
+.page {
+  @apply w-[210mm] h-[297mm] bg-[url('/assets/bg.png')] shadow-xl;
+}
+
+.card {
+  @apply w-[63mm] h-[88mm] my-[5mm] mx-[3mm] float-left;
+}
+
+.back {
+  background: url("/assets/back.png");
+  background-color: transparent;
+  background-size: 63mm 88mm;
+  background-repeat: no-repeat;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
