@@ -2,12 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@media print {
+  html,
+  body {
+    height: initial !important;
+    overflow: initial !important;
+  }
+}
+
+@media print {
+  .page {
+    page-break-after: always;
+  }
+}
+
 body {
   @apply bg-neutral-700;
 }
 
 .page {
-  @apply w-[210mm] h-[297mm] bg-[url('/assets/bg.png')] shadow-xl;
+  @apply w-[210mm] h-[297mm] bg-[url('/assets/bg.png')];
 }
 
 .card {
