@@ -40,7 +40,7 @@ export function Menu({menu, setMenu, refPrint, pages, setPages}) {
     }, [])
 
     return (
-        <div className="fixed right-5 top-5">
+        <div className="fixed right-5 top-5 z-10">
             <button
                 id="dropdown-button"
                 type="button"
@@ -51,7 +51,7 @@ export function Menu({menu, setMenu, refPrint, pages, setPages}) {
             </button>
             <div
                 id="dropdown-menu"
-                className={`${menu ? 'block' : 'hidden'} z-10 origin-top-right absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5`}
+                className={`${menu ? 'block' : 'hidden'} origin-top-right absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5`}
             >
                 <div className="py-2 p-2" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
                     <button
