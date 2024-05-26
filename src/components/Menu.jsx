@@ -24,7 +24,7 @@ export function Menu({menu, setMenu, refPrint, pages, setPages}) {
         pages.push(pageModel)
 
         setPages([...pages])
-        
+
         sessionStorage.setItem('pagesOfPrint', JSON.stringify(pages))
     }
 
@@ -56,14 +56,6 @@ export function Menu({menu, setMenu, refPrint, pages, setPages}) {
                 <div className="py-2 p-2" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
                     <button
                         type="button"
-                        onClick={() => {handlePrint(), setMenu(false)}}
-                        className="flex w-full rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
-                        role="menuitem"
-                    >
-                        Imprimir
-                    </button>
-                    <button
-                        type="button"
                         onClick={() => {addPage(), setMenu(false)}}
                         className="flex w-full rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
                         role="menuitem"
@@ -77,6 +69,25 @@ export function Menu({menu, setMenu, refPrint, pages, setPages}) {
                         role="menuitem"
                     >
                         Limpar Tudo
+                    </button>
+                    <a
+                        href="https://scryfall.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMenu(false)}
+                        className="flex w-full rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
+                        role="menuitem"
+                    >
+                        Buscar
+                    </a>
+                    <hr className="my-1" />
+                    <button
+                        type="button"
+                        onClick={() => {handlePrint(), setMenu(false)}}
+                        className="flex w-full rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer"
+                        role="menuitem"
+                    >
+                        Imprimir
                     </button>
                 </div>
             </div>
