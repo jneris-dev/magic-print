@@ -7,12 +7,15 @@
   body {
     height: initial !important;
     overflow: initial !important;
+    -webkit-print-color-adjust: inherit;
   }
-}
 
-@media print {
-  .page {
-    page-break-after: always;
+  .page.empty {
+    display: none;
+  }
+
+  #wrap-print {
+    gap: 0 !important;
   }
 }
 

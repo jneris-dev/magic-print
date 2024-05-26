@@ -8,8 +8,8 @@ export function Modal({modal, setModal, pages, setCardsByPage}) {
     })
 
     function addCard() {
-        pages[modal.page].cards[modal.id].name = fields.name
-        pages[modal.page].cards[modal.id].url = fields.url
+        pages[modal.page].cards[modal.id].name = fields.name.trim()
+        pages[modal.page].cards[modal.id].url = fields.url.trim()
 
         setCardsByPage([...pages])
 
@@ -94,14 +94,24 @@ export function Modal({modal, setModal, pages, setCardsByPage}) {
                                 })}
                             />
                         </div>
-                    </div>                        
-                    <button
-                        onClick={() => addCard()}
-                        disabled={fields.name === '' && fields.url === ''}
-                        className="w-full max-w-[200px] flex items-center justify-center py-3 px-7 rounded-lg bg-neutral-600 text-white disabled:opacity-60 text-sm font-semibold capitalize"
-                    >
-                        Adicionar
-                    </button>
+                    </div>
+                    <div className="w-full flex gap-5">
+                        <button
+                            onClick={() => setFields({
+                                name: '',
+                                url: ''
+                            })}
+                            className="flex-1 flex items-center justify-center py-3 px-7 rounded-lg bg-red-600 hover:bg-red-700 transition-all text-white disabled:opacity-60 text-sm font-semibold capitalize"
+                        >
+                            Limpar
+                        </button>
+                        <button
+                            onClick={() => addCard()}
+                            className={`flex-1 flex items-center justify-center py-3 px-7 rounded-lg bg-neutral-600 text-white text-sm font-semibold capitalize${fields.name === '' || fields.url === '' ? ' opacity-60 pointer-events-none' : ''}`}
+                        >
+                            Adicionar
+                        </button>
+                    </div>                   
                 </div>
             </div>
         </div>
