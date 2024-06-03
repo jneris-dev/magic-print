@@ -14,8 +14,25 @@
     display: none;
   }
 
+  .logo-wrap {
+    display: flex;
+  }
+
+  .page {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
+    padding-bottom: 30px;
+  }
+
   #wrap-print {
     gap: 0 !important;
+  }
+
+  .card {
+    margin: 0 !important;
   }
 }
 
