@@ -14,9 +14,9 @@
     display: none;
   }
 
-  .logo-wrap {
+  /* .logo-wrap {
     display: flex;
-  }
+  } */
 
   .page {
     display: flex;
@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     align-content: flex-end;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
   }
 
   #wrap-print {

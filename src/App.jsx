@@ -110,9 +110,9 @@ export function App() {
 
                     return (
                         <div className={`page relative${checkEmpty ? ' empty' : ''}`} key={index}>
-                        <div className="absolute top-5 right-0 items-center justify-center w-full logo-wrap hidden">
+                        {/* <div className="absolute top-5 right-0 items-center justify-center w-full logo-wrap hidden">
                             <img src="/logo.png" className="max-w-full w-[180px]" alt="" />
-                        </div>
+                        </div> */}
                             <button
                                 type="button"
                                 onClick={() => removePage(index)}
